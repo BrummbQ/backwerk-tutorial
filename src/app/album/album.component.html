@@ -1,3 +1,4 @@
-<p>
-  {{ album.title }}
-</p>
+<section>
+  <h1>{{ album.title }}</h1>
+  <img *ngFor="let photo of album.photos" [src]="photo.thumbnailUrl">
+</section>
