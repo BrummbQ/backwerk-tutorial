@@ -18,6 +18,13 @@ export class DataService {
             .catch(this.handleError);
     }
 
+    getAlbums () {
+        return this.http
+            .get(`${this.baseUrl}/albums`)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+
     private extractData(response) {
         let body = response.json();
         return body || { };

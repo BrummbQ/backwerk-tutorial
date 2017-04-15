@@ -1,5 +1,5 @@
 <h1>Users</h1>
-<ul>
-  <li *ngFor="let user of users">{{ user.name }}: {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.zipcode }} {{ user.address.city }}</li>
-</ul>
+<div class="user-list">
+  <app-user *ngFor="let user of users" [user]="user"></app-user>
+</div>
 <p *ngIf="error">Error: {{ error }}</p>
