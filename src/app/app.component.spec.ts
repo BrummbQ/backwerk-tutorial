@@ -2,12 +2,16 @@ import { TestBed, async } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
+import { AlbumComponent } from './album/album.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        UserComponent,
+        AlbumComponent
       ],
       imports: [
         HttpModule

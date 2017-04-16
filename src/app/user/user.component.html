@@ -1,7 +1,12 @@
-<p>
-  {{ user.name }}: {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.zipcode }} {{ user.address.city }}
-</p>
-<button type="button" (click)="showAlbum = !showAlbum">Show Album</button>
-<div *ngIf="showAlbum">
-  <app-album *ngFor="let album of user.albums" [album]="album"></app-album>
+<div class="user-item">
+  <p>
+    {{ user.name }}: {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.zipcode }} {{ user.address.city }}
+  </p>
+  <button class="albumbutton" type="button" (click)="showAlbum = !showAlbum">
+    <span *ngIf="!showAlbum">Show Albums</span>
+    <span *ngIf="showAlbum">Hide Albums</span>
+  </button>
+  <div *ngIf="showAlbum">
+    <app-album *ngFor="let album of user.albums" [album]="album"></app-album>
+  </div>
 </div>

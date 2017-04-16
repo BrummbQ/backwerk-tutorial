@@ -29,12 +29,12 @@ export class DataService {
         let users = data[2];
 
         albums.forEach(album => {
-            const photosForAlbum = photos.filter(photo => photo.albumId == album.id);
+            const photosForAlbum = photos.filter(photo => photo.albumId === album.id);
             album.photos = photosForAlbum;
         });
 
         users.forEach(user => {
-            const albumsForUser = albums.filter(album => album.userId == user.id);
+            const albumsForUser = albums.filter(album => album.userId === user.id);
             user.albums = albumsForUser;
         });
 

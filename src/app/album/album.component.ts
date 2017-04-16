@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
-  @Input() album: any;
+  @Input() album: any = {photos: []};
 
   constructor() { }
 

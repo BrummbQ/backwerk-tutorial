@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  @Input() user: any;
+  @Input() user: any = {address: {street: "", suite: "", zipcode: "", city: ""}, albums: []};
   showAlbum = false;
 
   constructor() { }
